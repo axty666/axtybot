@@ -7,25 +7,25 @@ async def _(session: NoticeSession):
     group_id = session.event.group_id
     if group_id in allowGroups:
         welcomeMessage = '[CQ:at,qq='+str(session.event.user_id)+']'+'迎新佬！'
-        welcomeMessage2 = '佬记得看客户端的txt文件'
-        welcomeMessage3 = '群文件里面有客户端'
+        welcomeMessage2 = '佬记得看启动器同目录下的txt说明文件'
+        welcomeMessage3 = '群文件里面有客↑户↓端'
         await session.send(welcomeMessage)
         await session.send(welcomeMessage2)
         await session.send(welcomeMessage3)
 
 @on_command('迎新佬')
 async def _(session: CommandSession):
-    await session.send('佬记得看客户端的txt文件')
-    await session.send('群文件里面有客户端')
+    await session.send('佬记得看启动器同目录下的txt说明文件')
+    await session.send('群文件里面有客↑户↓端')
 
 @on_natural_language(keywords={'迎新佬', '喜迎'})
 async def _(session: NLPSession):
     return IntentCommand(90.0, '迎新佬')
 
-@on_command('佬记得看客户端的txt文件')
+@on_command('佬记得看启动器同目录下的txt说明文件')
 async def _(session: CommandSession):
-    await session.send('群文件里面有客户端')
+    await session.send('群文件里面有客↑户↓端')
 
-@on_natural_language(keywords={'佬记得看客户端的txt文件', '佬记得看'})
+@on_natural_language(keywords={'佬记得看客户端的txt文件', '佬记得看', '佬记得看启动器同目录下的txt说明文件'})
 async def _(session: NLPSession):
-    return IntentCommand(90.0, '佬记得看客户端的txt文件')
+    return IntentCommand(90.0, '佬记得看启动器同目录下的txt说明文件')
