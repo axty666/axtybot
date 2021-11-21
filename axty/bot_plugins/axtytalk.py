@@ -1,14 +1,15 @@
 from nonebot import on_command, CommandSession
 from nonebot import on_natural_language, NLPSession, IntentCommand
+from jieba import posseg
 
-@on_command('咋报团取暖', aliases={'有无一块玩的', '有无一起玩的'})
+@on_command('咋抱团取暖', aliases={'有无一块玩的', '有无一起玩的'})
 async def _(session: CommandSession):
     await session.send('佬可以输入./cz加入一个城镇')
     await session.send('或者在./cz里面创建一个城镇(需要1000游戏币)(')
 
-@on_natural_language(keywords={'一块玩', '一起玩', '报团取暖'})
+@on_natural_language(keywords={'一块玩', '一起玩', '抱团'})
 async def _(session: NLPSession):
-    return IntentCommand(90.0, '咋报团取暖')
+    return IntentCommand(90.0, '咋抱团取暖')
 
 @on_command('咋去暮色', aliases={'怎样去暮色'})
 async def _(session: CommandSession):
