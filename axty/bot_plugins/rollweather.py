@@ -1,5 +1,6 @@
 from nonebot import on_command, CommandSession
 from nonebot import on_natural_language, NLPSession, IntentCommand
+from jieba import posseg
 import time
 from random import randint
 
@@ -21,6 +22,9 @@ async def weather(session: CommandSession):
     # 向用户发送天气预报
     await session.send(weather_report)
 
+@on_natural_language(keywords={'rollweather'})
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '')
 
 # weather.args_parser 装饰器将函数声明为 weather 命令的参数解析器
 # 命令解析器用于将用户输入的参数解析成命令真正需要的数据
@@ -52,9 +56,9 @@ async def get_weather_of_city(city: str) -> str:
     rollweather = await weatherthings()
     return f'{city}的天气'+ str(rollweather)
 
-@on_natural_language(keywords={'随机天气'})
+@on_natural_language(keywords={'随机天气', '随机天气预报', '随机查天气'})
 async def _(session: NLPSession):
-    return IntentCommand(90.0, '随机天气')
+    return IntentCommand(90.0, 'rollweather')
 
 
 
