@@ -24,4 +24,4 @@ async def _(session: CommandSession):
 天气--输入“天气”然后输入任意内容来感受axty的怪活
 ---------
 如果恁想与axty一起整点活可以私聊axty，若了解Python编程可以前往https://github.com/axty666/axtybot 一起整活并fork you!
-(axty大爱Fantasy_z(逃)''')
+(axty大爱Fantasy_Z(逃)''')

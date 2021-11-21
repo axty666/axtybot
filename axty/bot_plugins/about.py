@@ -17,4 +17,4 @@ async def _(session: CommandSession):
 本bot参考了MARYTbot的代码，在此向苟佬致谢！
 如果恁想与axty一起整点活可以私聊axty，若了解Python编程可以前往https://github.com/axty666/axtybot 一起整活并fork you!
 ---------
-(axty大爱Fantasy_z(逃)''')
+(axty大爱Fantasy_Z(逃)''')

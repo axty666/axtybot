@@ -1,4 +1,5 @@
 from nonebot import on_command, CommandSession
+from nonebot import on_natural_language, NLPSession, IntentCommand
 import time
 from random import randint
 
@@ -11,7 +12,7 @@ async def weatherthings():
 
 # on_command 装饰器将函数声明为一个命令处理器
 # 这里 weather 为命令的名字，同时允许使用别名「天气」「天气预报」「查天气」
-@on_command('weather', aliases=('天气', '天气预报', '查天气'))
+@on_command('rollweather', aliases=('随机天气', '随机天气预报', '随机查天气'))
 async def weather(session: CommandSession):
     # 从会话状态（session.state）中获取城市名称（city），如果当前不存在，则询问用户
     city = session.get('city', prompt='哪里天气？')
@@ -50,6 +51,11 @@ async def get_weather_of_city(city: str) -> str:
     # 实际应用中，这里应该调用返回真实数据的天气 API，并拼接成天气预报内容
     rollweather = await weatherthings()
     return f'{city}的天气'+ str(rollweather)
+
+@on_natural_language(keywords={'随机天气'})
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '随机天气')
+
 
 
 #本命令主要借鉴并学习了：
