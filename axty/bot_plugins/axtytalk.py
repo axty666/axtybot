@@ -47,3 +47,11 @@ async def _(session: CommandSession):
 @on_natural_language(keywords={'去商店', '商店在哪', '主城商店'})
 async def _(session: NLPSession):
     return IntentCommand(90.0, '去商店')
+    
+@on_command('共享啊团', aliases={'扫码啊团', '共享阿团', '扫码阿团'})
+async def _(session: CommandSession):
+    await session.send('扫码就骑!')
+
+@on_natural_language(keywords={'共享啊团', '扫码啊团', '共享阿团', '扫码阿团'})
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '共享啊团')
