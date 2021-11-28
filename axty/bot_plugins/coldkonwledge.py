@@ -28,6 +28,7 @@ List = [
     ,"白桦的前任女儿:被ax用心调教(并没有)过后的小树妖(盖亚萌典3mod的小树妖)"
     ,"axty喜欢Fantasy_Z"
     ]
+
 async def coldknowledge():
     Thing = List[randint(0,len(List)-1)]
     return "冷知识："+Thing
@@ -40,3 +41,7 @@ async def _(session: CommandSession):
 @on_natural_language(keywords={'冷知识'})
 async def _(session: NLPSession):
     return IntentCommand(90.0, '冷知识')
+
+@on_command('冷知识列表', aliases={'冷知识list', 'coldkonwledgelist', 'coldkonwledge列表'})
+async def _(session: CommandSession):
+    await session.send('404 not found')
