@@ -75,3 +75,11 @@ async def _(session: CommandSession):
 @on_natural_language(keywords={'升级城镇', '城镇升级', '给城镇'})
 async def _(session: NLPSession):
     return IntentCommand(90.0, '升级城镇')
+
+@on_command('开箱子', aliases={'打开箱子'})
+async def _(session: CommandSession):
+    await session.send('箱子锁')
+
+@on_natural_language(keywords={'开箱子', '开箱子', '解锁箱子', '开我的箱子'})
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '开箱子')
