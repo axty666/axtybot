@@ -44,7 +44,7 @@ async def _(session: CommandSession):
     await session.send('以上两个的物品定时刷新(价格优惠)')
     await session.send('如果上面两个都没有的话可以./spawn回到主城，然后沿着左前方的路走')
 
-@on_natural_language(keywords={'去商店', '商店在哪', '主城商店'})
+@on_natural_language(keywords={'去商店', '商店在哪', '主城商店', '商店'})
 async def _(session: NLPSession):
     return IntentCommand(90.0, '去商店')
     
@@ -55,3 +55,23 @@ async def _(session: CommandSession):
 @on_natural_language(keywords={'共享啊团', '扫码啊团', '共享阿团', '扫码阿团'})
 async def _(session: NLPSession):
     return IntentCommand(90.0, '共享啊团')
+
+@on_command('挣钱', aliases={'得钱'})
+async def _(session: CommandSession):
+    await session.send('目前服务器内有两种钱,平常交易时的游戏币')
+    await session.send('游戏币可以通过每日签到，去商店那边卖东西来获得(')
+    await session.send('另一种就是城镇币，佬可以在./cz那边创建一个城镇或者加入一个城镇后以捐城镇币的方式获得')
+    await session.send('城镇币可以用来升级城镇有关的东西')
+
+@on_natural_language(keywords={'挣钱', '得钱', '钱怎么弄'})
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '挣钱')
+
+@on_command('升级城镇', aliases={'城镇升级'})
+async def _(session: CommandSession):
+    await session.send('佬可以用城镇币来升级城镇有关的东西（')
+    await session.send('佬在./cz那边创建一个城镇或者加入一个城镇后以捐城镇币的方式得城镇币（')
+
+@on_natural_language(keywords={'升级城镇', '城镇升级', '给城镇'})
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '升级城镇')
