@@ -1,7 +1,8 @@
 # axtybot
 运行于MARYT/VANILO服务器群内的玩家机器人，使用nonebot+gocqhttp搭建
 
-实际运行于装载ubuntu18系统的海外vps上，状态良好
+在运行于装载ubuntu18系统的256mb内存的海外vps上时状态良好
+目前已加入国内高性能vps豪华套餐（）
 
 如果您想在装载windows系统上使用，请前往https://github.com/RisingInIris2017/MARYTBot
 
@@ -30,10 +31,14 @@ sudo apt install python3
 sudo apt install python3-pip
 ```
 
-安装nonebot
+安装nonebot(如果您想运行本项目还需要安装jieba分词和pythonping这两个包)
 
 ```
 pip install nonebot
+```
+可选（安装jieba分词和pythonping）
+```
+pip install jieba pythonping
 ```
 
 
