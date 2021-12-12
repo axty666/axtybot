@@ -18,7 +18,7 @@ async def _(session: CommandSession):
     await session.send('佬记得看启动器同目录下的txt说明文件')
     await session.send('群文件里面有客↑户↓端')
 
-@on_natural_language(keywords={'迎新佬', '喜迎'})
+@on_natural_language(keywords={'迎新佬', '喜迎'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '迎新佬')
 
@@ -26,6 +26,6 @@ async def _(session: NLPSession):
 async def _(session: CommandSession):
     await session.send('群文件里面有客↑户↓端')
 
-@on_natural_language(keywords={'佬记得看客户端的txt文件', '佬记得看', '佬记得看启动器同目录下的txt说明文件'})
+@on_natural_language(keywords={'佬记得看客户端的txt文件', '佬记得看', '佬记得看启动器同目录下的txt说明文件'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '佬记得看启动器同目录下的txt说明文件')

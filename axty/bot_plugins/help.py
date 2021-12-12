@@ -17,11 +17,14 @@ async def _(session: CommandSession):
 ---------
 帮助--显示本条信息
 关于axtybot--显示感谢信息和有关信息
+ping--ping一下指定的主机
 ---------
 以下是axty整的怪活
 ---------
 冷知识--输入“冷知识”随机抽取一条冷知识
-天气--输入“天气”然后输入任意内容来感受axty的怪活
+随机天气--输入“随机天气”然后输入任意内容来感受axty的怪活
 ---------
-如果恁想与axty一起整点活可以私聊axty，若了解Python编程可以前往https://github.com/axty666/axtybot 一起整活并fork you!
+如果恁想与axty一起整点活可以私聊axty，若恁也了解Python编程和github也可以可以前往
+https://github.com/axty666/axtybot 一起整活并fork you!
+关于有的消息无法识别请参见https://github.com/nonebot/nonebot/issues/286
 (axty大爱Fantasy_Z(逃)''')

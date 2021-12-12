@@ -22,10 +22,6 @@ async def weather(session: CommandSession):
     # 向用户发送天气预报
     await session.send(weather_report)
 
-@on_natural_language(keywords={'rollweather'})
-async def _(session: NLPSession):
-    return IntentCommand(90.0, '')
-
 # weather.args_parser 装饰器将函数声明为 weather 命令的参数解析器
 # 命令解析器用于将用户输入的参数解析成命令真正需要的数据
 @weather.args_parser
@@ -56,7 +52,7 @@ async def get_weather_of_city(city: str) -> str:
     rollweather = await weatherthings()
     return f'{city}的天气'+ str(rollweather)
 
-@on_natural_language(keywords={'随机天气', '随机天气预报', '随机查天气'})
+@on_natural_language(keywords={'随机天气', '随机天气预报', '随机查天气'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, 'rollweather')
 

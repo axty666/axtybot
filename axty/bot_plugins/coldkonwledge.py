@@ -22,13 +22,17 @@ List = [
     ,"寄！"
     ,"该青年大学习了团团们（"
     ,"三分钟前热心的阿苟为你检察了下牛牛的健康，请放心，你的牛牛非常健康"
-    ,"冷知识：念哼哼哈哈有时候会不小心喊成哼↑哼↓啊啊啊"
+    ,"念哼哼哈哈有时候会不小心喊成哼↑哼↓啊啊啊"
     ,"今天风和日丽,晴空万里,而你，就该绝版。"
     ,"axty天天说跑路但仍然没跑路(因为懒()"
+    ,"不能理解对方的时候可以试着ping下对方的IP地址"
+    ,"从前有只可爱的狗狗叫牧牧，后来他死于一场意外，他的主人为了纪念他养了第二条可爱的狗狗叫怀念牧牧"
+    ,"据说ax有只可爱的狗狗叫怀念怀念牧牧"
+    ,"赞美Fantasy_Z"
+    ,"我，秦始皇，打钱!"
     ,"白桦的前任女儿:被ax用心调教(并没有)过后的小树妖(盖亚萌典3mod的小树妖)"
     ,"axty喜欢Fantasy_Z"
     ]
-
 async def coldknowledge():
     Thing = List[randint(0,len(List)-1)]
     return "冷知识："+Thing
@@ -38,10 +42,6 @@ async def _(session: CommandSession):
     CKL = await coldknowledge()
     await session.send(CKL)
 
-@on_natural_language(keywords={'冷知识'})
+@on_natural_language(keywords={'冷知识'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '冷知识')
-
-@on_command('冷知识列表', aliases={'冷知识list', 'coldkonwledgelist', 'coldkonwledge列表'})
-async def _(session: CommandSession):
-    await session.send('404 not found')
