@@ -1,4 +1,3 @@
-from nonebot import session, on_notice, NoticeSession
 from nonebot import on_command, CommandSession
 from nonebot import on_natural_language, NLPSession, IntentCommand
 from jieba import posseg
@@ -8,7 +7,7 @@ async def _(session: CommandSession):
     await session.send('佬可以输入./cz加入一个城镇')
     await session.send('或者在./cz里面创建一个城镇(需要1000游戏币)(')
 
-@on_natural_language(keywords={'一块玩', '一起玩', '抱团'}, only_to_me=False)
+@on_natural_language(keywords={'一块玩', '一起玩', '抱团'})
 async def _(session: NLPSession):
     return IntentCommand(90.0, '咋抱团取暖')
 
@@ -17,7 +16,7 @@ async def _(session: CommandSession):
     await session.send('佬请使用"沾满魔力的铜钥匙"代替钻石来开启暮色门')
     await session.send('铜钥匙可以在jei里面查找到（')
 
-@on_natural_language(keywords={'去暮色'}, only_to_me=False)
+@on_natural_language(keywords={'去暮色'})
 async def _(session: NLPSession):
     return IntentCommand(90.0, '咋去暮色')
 
@@ -26,7 +25,7 @@ async def _(session: CommandSession):
     await session.send('佬可以找管理组进行一个的询问（')
     await session.send('ps:佬如果想整点官网的话可以私聊axty(')
 
-@on_natural_language(keywords={'创建玩家组织'}, only_to_me=False)
+@on_natural_language(keywords={'创建玩家组织'})
 async def _(session: NLPSession):
     return IntentCommand(90.0, '咋创建玩家组织')
 
@@ -35,7 +34,7 @@ async def _(session: CommandSession):
     await session.send('./pay 玩家id 钱数')
     await session.send('示例：/pay axty 0.01')
 
-@on_natural_language(keywords={'咋打钱', '咋给钱', '怎样给钱'}, only_to_me=False)
+@on_natural_language(keywords={'咋打钱', '咋给钱', '怎样给钱'})
 async def _(session: NLPSession):
     return IntentCommand(90.0, '咋给钱')
 
@@ -45,17 +44,72 @@ async def _(session: CommandSession):
     await session.send('以上两个的物品定时刷新(价格优惠)')
     await session.send('如果上面两个都没有的话可以./spawn回到主城，然后沿着左前方的路走')
 
-@on_natural_language(keywords={'去商店', '商店在哪', '主城商店', '商店'}, only_to_me=False)
+@on_natural_language(keywords={'去商店', '商店在哪', '主城商店'})
 async def _(session: NLPSession):
     return IntentCommand(90.0, '去商店')
     
-@on_command('共享啊团', aliases={'扫码啊团', '共享阿团', '扫码阿团'})
+@on_command('共享啊团', aliases={'扫码啊团'})
 async def _(session: CommandSession):
     await session.send('扫码就骑!')
 
-@on_natural_language(keywords={'共享啊团', '扫码啊团', '共享阿团', '扫码阿团'}, only_to_me=False)
+@on_natural_language(keywords={'共享啊团', '扫码啊团'}, only_to_me=False)
 async def _(session: NLPSession):
-    return IntentCommand(90.0, '共享啊团')
+    return IntentCommand(90.0, '共享啊团') 
+    #await session.send('扫码就骑!')
+
+@on_command('联动啊团', aliases={'联动啊团'})
+async def _(session: CommandSession):
+    await session.send('''劲爆！?%bike与mryat studio最新联动:
+今日，?%bike与mryat studio刚刚官宣了两者最新联动，?%bike宣布，凡在?%bike所属共享单车停车点扫码时大声喊出:“共享啊团，扫码就骑！”者，即可获得玩家:tuan_zi色图一张（原价99元人民币），由于玩家:tuan_zi的原照片十分模糊，所以?%bike只能提供一成新的照片，以及不能保证无重大污渍，更不保证是否为本人。另据本人所说，新春八折一次''')
+
+@on_natural_language(keywords={'联动啊团', '联动阿团'}, only_to_me=False)
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '联动啊团')    
+
+@on_command('联动白桦和狗蛋', aliases={'联动百猾和狗蛋'})
+async def _(session: CommandSession):
+    await session.send('狗蛋:胖胖百猾，狗蛋捏捏')
+
+@on_natural_language(keywords={'联动白桦和狗蛋', '联动百猾和狗蛋', '联动狗蛋和白桦', '联动狗蛋和百猾'}, only_to_me=False)
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '联动白桦和狗蛋')
+
+@on_command('胖胖白桦', aliases={'胖胖百猾'})
+async def _(session: CommandSession):
+    await session.send('狗蛋捏捏')
+
+@on_natural_language(keywords={'胖胖百猾', '胖胖白桦'}, only_to_me=False)
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '胖胖白桦')
+
+@on_command('狗比狗团', aliases={'狗批狗团'})
+async def _(session: CommandSession):
+    await session.send('吃我一剑!')
+
+@on_natural_language(keywords={'狗比啊团', '狗批狗团', '狗比阿团'}, only_to_me=False)
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '狗比狗团')
+
+@on_command('吃什么', aliases={'吃啥'})
+async def _(session: CommandSession):
+    await session.send('吃大厨ax亲手秘制无星好评之鸡蛋炒青菜')
+    await session.send('''白菜  寡淡  油腻
+白菜  寡淡  油腻
+鸡蛋  寡淡  油腻  夹生
+鸡蛋  寡淡  油腻  夹生''')
+    await session.send('吃完即上路，童嫂无欺～～～')
+
+@on_natural_language(keywords={'吃什么', '吃啥'}, only_to_me=False)
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '吃什么')
+
+@on_command('睡觉', aliases={'入眠'})
+async def _(session: CommandSession):
+    await session.send('你周围有怪物游荡')
+
+@on_natural_language(keywords={'睡觉', '入眠'}, only_to_me=False)
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '睡觉')
 
 @on_command('挣钱', aliases={'得钱'})
 async def _(session: CommandSession):
