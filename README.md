@@ -1,7 +1,8 @@
 # axtybot
 运行于MARYT/VANILO服务器群内的玩家机器人，使用nonebot+gocqhttp搭建
 
-在运行于装载ubuntu18系统的256mb内存的海外vps上时状态良好
+~~在运行于装载ubuntu18系统的256mb内存的海外vps上时状态良好~~
+
 目前已加入国内高性能vps豪华套餐（）
 
 如果您想在装载windows系统上使用，请前往https://github.com/RisingInIris2017/MARYTBot
