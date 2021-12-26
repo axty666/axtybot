@@ -5,7 +5,7 @@
 
 目前已加入国内高性能vps豪华套餐（）
 
-如果您想在装载windows系统上使用，请前往https://github.com/RisingInIris2017/MARYTBot
+如果您想在装载windows系统的主机上使用，请前往https://github.com/RisingInIris2017/MARYTBot
 
 ### **开始使用**
 
