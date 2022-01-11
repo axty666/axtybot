@@ -32,7 +32,7 @@ sudo apt install python3
 sudo apt install python3-pip
 ```
 
-安装nonebot(如果您想运行本项目还需要安装jieba分词和pythonping这几个包)
+安装nonebot(如果您想运行本项目还需要安装jieba分词和pythonping等几个包)
 
 ```
 pip install nonebot
