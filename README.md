@@ -37,9 +37,9 @@ sudo apt install python3-pip
 ```
 pip install nonebot
 ```
-可选（安装jieba分词和pythonping和nonebot的计划任务(会顺带安装APScheduler)）
+可选（安装jieba分词和pythonping和nonebot的计划任务(会顺带安装APScheduler)和用来转换时区的第三方模块）
 ```
-pip install jieba pythonping "nonebot[scheduler]"
+pip install jieba pythonping "nonebot[scheduler]" pytz
 ```
 
 
