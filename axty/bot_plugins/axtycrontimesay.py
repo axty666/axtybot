@@ -34,7 +34,7 @@ async def _():
     now = datetime.now(pytz.timezone('Asia/Shanghai'))
     try:
         await bot.send_group_msg(group_id=640614812,
-                             message="三点力！,该摸服力！")
+                             message="三点力！该摸服力！")
     except CQHttpError:
         pass
 
