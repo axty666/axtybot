@@ -58,7 +58,7 @@ gocqhttp
 ```
 #### **运行gocqhttp**
 ```
-screen -r gocqhttp #新建一个叫做gocqhttp的screen
+screen -R gocqhttp #进入叫做gocqhttp的screen里面，如果没有叫这个名字的screen则会创建一个同名的
 cd gocqhttp        #切换到gocqhttp文件夹内
 ./go-cqhttp        #运行gocqhttp
 ```
@@ -66,7 +66,7 @@ cd gocqhttp        #切换到gocqhttp文件夹内
 #### **运行nonebot**
 
 ```
-screen -r nonebot   #新建一个叫做nonebot的screen
+screen -R nonebot   #进入叫做nonebot的screen里面，如果没有叫这个名字的screen则会创建一个同名的
 cd axty             #切换到axty文件夹内
 python bot.py       #运行nonebot
 ```
