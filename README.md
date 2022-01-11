@@ -32,14 +32,14 @@ sudo apt install python3
 sudo apt install python3-pip
 ```
 
-安装nonebot(如果您想运行本项目还需要安装jieba分词和pythonping这两个包)
+安装nonebot(如果您想运行本项目还需要安装jieba分词和pythonping这几个包)
 
 ```
 pip install nonebot
 ```
-可选（安装jieba分词和pythonping）
+可选（安装jieba分词和pythonping和nonebot的计划任务(会顺带安装APScheduler)）
 ```
-pip install jieba pythonping
+pip install jieba pythonping "nonebot[scheduler]"
 ```
 
 
