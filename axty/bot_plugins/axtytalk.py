@@ -7,7 +7,7 @@ async def _(session: CommandSession):
     await session.send('佬可以输入./cz加入一个城镇')
     await session.send('或者在./cz里面创建一个城镇(需要1000游戏币)(')
 
-@on_natural_language(keywords={'一块玩', '一起玩', '抱团'})
+@on_natural_language(keywords={'一块玩', '一起玩', '抱团'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '咋抱团取暖')
 
@@ -16,7 +16,7 @@ async def _(session: CommandSession):
     await session.send('佬请使用"沾满魔力的铜钥匙"代替钻石来开启暮色门')
     await session.send('铜钥匙可以在jei里面查找到（')
 
-@on_natural_language(keywords={'去暮色'})
+@on_natural_language(keywords={'去暮色'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '咋去暮色')
 
@@ -25,7 +25,7 @@ async def _(session: CommandSession):
     await session.send('佬可以找管理组进行一个的询问（')
     await session.send('ps:佬如果想整点官网的话可以私聊axty(')
 
-@on_natural_language(keywords={'创建玩家组织'})
+@on_natural_language(keywords={'创建玩家组织'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '咋创建玩家组织')
 
@@ -34,7 +34,7 @@ async def _(session: CommandSession):
     await session.send('./pay 玩家id 钱数')
     await session.send('示例：/pay axty 0.01')
 
-@on_natural_language(keywords={'咋打钱', '咋给钱', '怎样给钱'})
+@on_natural_language(keywords={'咋打钱', '咋给钱', '怎样给钱'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '咋给钱')
 
@@ -44,7 +44,7 @@ async def _(session: CommandSession):
     await session.send('以上两个的物品定时刷新(价格优惠)')
     await session.send('如果上面两个都没有的话可以./spawn回到主城，然后沿着左前方的路走')
 
-@on_natural_language(keywords={'去商店', '商店在哪', '主城商店'})
+@on_natural_language(keywords={'去商店', '商店在哪', '主城商店'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '去商店')
     
@@ -103,14 +103,6 @@ async def _(session: CommandSession):
 async def _(session: NLPSession):
     return IntentCommand(90.0, '吃什么')
 
-@on_command('睡觉', aliases={'入眠'})
-async def _(session: CommandSession):
-    await session.send('你周围有怪物游荡')
-
-@on_natural_language(keywords={'睡觉', '入眠'}, only_to_me=False)
-async def _(session: NLPSession):
-    return IntentCommand(90.0, '睡觉')
-
 @on_command('挣钱', aliases={'得钱'})
 async def _(session: CommandSession):
     await session.send('目前服务器内有两种钱,平常交易时的游戏币')
@@ -135,7 +127,16 @@ async def _(session: NLPSession):
 async def _(session: CommandSession):
     await session.send('箱子锁')
 
-@on_natural_language(keywords={'开箱子', '开箱子', '解锁箱子', '开我的箱子'}, only_to_me=False)
+@on_natural_language(keywords={'开箱子', '解锁箱子', '开我的箱子', '箱子怎么解锁'}, only_to_me=False)
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '开箱子')
+
+@on_command('添加人', aliases={'添加朋友'})
+async def _(session: CommandSession):
+    await session.send('如果事ftbteam的请参照服务器内有关提示')
+    await session.send('如果是/箱/子/锁/有关的请参考[箱子锁]')
+
+@on_natural_language(keywords={'添加朋友', '添加人'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '开箱子')
 
