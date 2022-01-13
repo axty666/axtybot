@@ -7,7 +7,7 @@ async def _(session: CommandSession):
     await session.send('佬可以输入./cz加入一个城镇')
     await session.send('或者在./cz里面创建一个城镇(需要1000游戏币)(')
 
-@on_natural_language(keywords={'一块玩', '一起玩', '抱团'}, only_to_me=False)
+@on_natural_language(keywords={'一块玩', '一起玩', '抱团', '创建城镇', '建个城镇', '建城镇'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '咋抱团取暖')
 
@@ -191,9 +191,46 @@ async def _(session: CommandSession):
     await session.send('但是有一键砍树，按shift可取消连锁砍树')  
     await session.send('一键砍树所需要的时间与砍的原木的数量成正比（')
 
-@on_natural_language(keywords={'有无连锁', '连锁的指令', '有没有连锁', '连锁的命令', '有连锁'}, only_to_me=False)
+@on_natural_language(keywords={'有无连锁', '连锁的指令', '有没有连锁', '连锁的命令', '有连锁', '加连锁'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '连锁')
+
+@on_command('签到有', aliases={'签到里'})
+async def _(session: CommandSession):
+    await session.send('随机建材礼包')
+    await session.send('还有游戏币')
+    await session.send('有时会有牛奶/金苹果')
+
+@on_natural_language(keywords={'签到能', '签到有', '签到里', '签到得'}, only_to_me=False)
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '签到有')
+
+@on_command('游戏币有', aliases={'游戏币里'})
+async def _(session: CommandSession):
+    await session.send('玩家间交易')
+    await session.send('还有和别人一起玩的时候创建城镇')
+    await session.send('以及充值城镇币 充实城镇')
+
+@on_natural_language(keywords={'游戏币能', '游戏币有', '游戏币里', '游戏币得'}, only_to_me=False)
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '游戏币有')
+
+@on_command('我的账户', aliases={'有多少钱'})
+async def _(session: CommandSession):
+    await session.send('/money')
+
+@on_natural_language(keywords={'我的账户', '有多少钱', '账户余额', '游戏币余额'}, only_to_me=False)
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '我的账户')
+
+@on_command('游戏币排行榜', aliases={'多么富'})
+async def _(session: CommandSession):
+    await session.send('/baltop')
+    await session.send('记忆中是这个，如果不是属于咱丢人力')
+
+@on_natural_language(keywords={'多么富', '财富排行'}, only_to_me=False)
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '游戏币排行榜')
 
 @on_command('来点涩图', aliases={'请求色色'})
 async def _(session: CommandSession):
