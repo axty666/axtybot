@@ -76,7 +76,7 @@ async def _(session: NLPSession):
 
 @on_command('胖胖白桦', aliases={'胖胖百猾'})
 async def _(session: CommandSession):
-    await session.send('狗蛋捏捏')
+    await session.send('狗蛋：狗蛋捏捏')
 
 @on_natural_language(keywords={'胖胖百猾', '胖胖白桦'}, only_to_me=False)
 async def _(session: NLPSession):
@@ -138,7 +138,7 @@ async def _(session: CommandSession):
 
 @on_natural_language(keywords={'添加朋友', '添加人'}, only_to_me=False)
 async def _(session: NLPSession):
-    return IntentCommand(90.0, '开箱子')
+    return IntentCommand(90.0, '添加人')
 
 #@on_command('不懂就问', permission=lambda sender_id: 3116886930 | Container[2153069097])
 @on_command('不懂就问', permission=lambda sender: sender.is_superuser)
@@ -174,6 +174,16 @@ async def _(session: CommandSession):
 @on_natural_language(keywords={'有无地皮', '地皮的指令', '有没有地皮', '地皮的命令', '有地皮'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '地皮')
+
+@on_command('领地权限', aliases={'领地权限'})
+async def _(session: CommandSession):
+    await session.send('单独给别人的：/res pset')
+    await session.send('设置公共权限：/res set')
+    await session.send('欲知更多，请参照/res ? (记忆里是这个)')
+
+@on_natural_language(keywords={'给领地权限', '友领地权限', '领地权限', '领地权限的命令', '设置领地'}, only_to_me=False)
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '领地权限')
 
 @on_command('随机传送', aliases={'随机传送'})
 async def _(session: CommandSession):
@@ -219,7 +229,7 @@ async def _(session: NLPSession):
 async def _(session: CommandSession):
     await session.send('/money')
 
-@on_natural_language(keywords={'我的账户', '有多少钱', '账户余额', '游戏币余额'}, only_to_me=False)
+@on_natural_language(keywords={'我的账户', '有多少钱', '账户余额', '游戏币余额', '看资产'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '我的账户')
 
@@ -237,16 +247,15 @@ async def _(session: CommandSession):
     await session.send('好的，给！')
     await session.send('https://www.aliyundrive.com/s/GKGaBRsAtRL')
 
-@on_natural_language(keywords={'涩图', '色图', '瑟图', '色色', '瑟瑟', '涩涩'}, only_to_me=False)
+@on_natural_language(keywords={'涩图', '色图', '瑟图', '色色', '涩涩'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '来点涩图')
 
 @on_command('春晚合集', aliases={'春晚大合集'})
 async def _(session: CommandSession):
-    await session.send('''「春晚1956-2021【4K】」，链接:https://www.aliyundrive.com/s/GKGaBRsAtRL
-''')
+    await session.send('''「春晚1956-2021【4K】」，链接:https://www.aliyundrive.com/s/GKGaBRsAtRL''')
 
-@on_natural_language(keywords={'春晚合集', '春晚大全', '以前的春晚', '有无春晚', '重温春晚'}, only_to_me=False)
+@on_natural_language(keywords={'春晚合集', '春晚大全', '以前的春晚', '有无春晚', '重温春晚', '春晚'}, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90.0, '春晚合集')
 

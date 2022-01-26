@@ -4,7 +4,7 @@ from nonebot import on_natural_language, NLPSession, IntentCommand
 from random import randint
 
 List = [
-    "'你周围有怪物游荡'"
+    "你周围有怪物游荡"
     ,"你被刻意的游戏设计炸死了"
     ,"你只能在夜晚或雷暴天睡觉"
     ,"床离你太远了"
