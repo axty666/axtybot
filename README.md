@@ -1,8 +1,8 @@
 ## **axtybot**
 
-~~运行于MARYT/VANILO服务器群内的玩家机器人，使用nonebot+gocqhttp搭建~~
+运行于VANILO服务器群内的玩家机器人，使用nonebot+gocqhttp搭建
 
-**现只更新并对VANILO服务器群提供支持**，[MARYT服务器群](https://github.com/axty666/axtybot/tree/maryt-end)的如无意外将不再提供支持
+
 
 在运行于装载ubuntu18系统的256mb内存的海外vps上时状态良好
 
