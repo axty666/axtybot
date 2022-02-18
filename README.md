@@ -1,10 +1,14 @@
 ## **axtybot**
 
-运行于MARYT/VANILO服务器群内的玩家机器人，使用nonebot+gocqhttp搭建
+~~运行于MARYT/VANILO服务器群内的玩家机器人，使用nonebot+gocqhttp搭建~~
+
+本分支是第一个同时也是最后一个对于MARYT服务器的内容作支持的版本
+
+适用于 **MARYT 10th**
 
 在运行于装载ubuntu18系统的256mb内存的海外vps上时状态良好
 
-目前暂定每周目结束后创建新的分支更新新的周目有关内容
+~~目前暂定每周目结束后创建新的分支更新新的周目有关内容~~
 
 如果您想在装载windows系统的主机上使用，请前往[MARYTbot](https://github.com/RisingInIris2017/MARYTBot)
 
