@@ -120,3 +120,22 @@ python bot.py       #运行nonebot
 2. 可使用web面板(需要服务器商开启80/443端口)管理
 3. 全自动加入黑名单/同意好友
 4. 未完持续
+
+------
+
+### 感谢名单
+
+
+感谢vanilo管理组对于咱这个bot滴支持
+
+感谢苟佬(azurePh03nix)解决了咱提出的一些写bot时碰见的低级问题
+
+感谢vanilo玩家对于咱这个bot的欢迎
+
+感谢Fantasy_Z对于本项目持续的提供好主意
+
+本bot参考了开源项目Box-s-ville/luciabot，在此向项目开发者致谢！
+
+本bot参考了开源项目nonebot/nonebot的教程,在此向项目开发者致谢！
+
+本bot参考了MARYTbot的代码，在此向苟佬致谢！
