@@ -2,8 +2,6 @@
 
 运行于MARYT/VANILO服务器群内的玩家机器人，使用nonebot+gocqhttp搭建
 
-
-
 在运行于装载ubuntu18系统的256mb内存的海外vps上时状态良好
 
 目前暂定每周目结束后创建新的分支更新新的周目有关内容
@@ -19,6 +17,10 @@
 #### **准备工作**
 
 注：如果您使用的是ubuntu20则可以考虑不用安装python3.8+（自带）
+
+**如果您使用的是vanilo分支，请注意5703端口是否被占用，maryt分支则请注意5702端口是否被占用**
+
+**如果被占用请干掉占用这两个端口的进程/在配置里面修改端口!**
 
 安装screen(保证稳定提供服务)
 
@@ -53,13 +55,10 @@ pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
 #python 3.8指的是pip的所用的python的版本，需3.8+
 ```
 
-
-
 #### **运行axtybot**
 
-安装nonebot
-
 ```shell
+#安装nonebot
 pip install nonebot
 ```
 **可选，但如果运行本项目的话是必装的**(不然会在运行时报没找到对应模块，并且依赖于对应模块的插件不会运行)
@@ -69,7 +68,6 @@ pip install nonebot
 ```shell
 pip install jieba pythonping "nonebot[scheduler]" pytz
 ```
-
 
 下载本项目并解压到主机上相应位置（以解压到axtybot文件夹为例）
 
