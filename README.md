@@ -1,6 +1,6 @@
 ## **axtybot**
 
-运行于VANILO服务器群内的玩家机器人，使用nonebot+gocqhttp搭建
+运行于MARYT/VANILO服务器群内的玩家机器人，使用nonebot+gocqhttp搭建
 
 
 
@@ -75,6 +75,7 @@ pip install jieba pythonping "nonebot[scheduler]" pytz
 
 ```shell
 cd axtybot         #切换到axtybot文件夹内
+cd maryt           #切换到maryt分支，如果想使用vanilo分支请cd vanilo
 ls                 #列出axtybot文件夹内文件夹
 ```
 
@@ -130,7 +131,7 @@ python bot.py       #运行nonebot
 
 感谢苟佬(azurePh03nix)解决了咱提出的一些写bot时碰见的低级问题
 
-感谢vanilo玩家对于咱这个bot的欢迎
+感谢maryt/vanilo玩家对于咱这个bot的欢迎
 
 感谢Fantasy_Z对于本项目持续的提供好主意
 
