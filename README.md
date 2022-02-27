@@ -66,7 +66,7 @@ pip install nonebot
 （依次是安装jieba分词和pythonping和nonebot的计划任务(会顺带安装APScheduler)和用来转换时区的第三方模块）
 
 ```shell
-pip install jieba pythonping "nonebot[scheduler]" pytz
+pip install jieba pythonping "nonebot[scheduler]" pytz python-dateutil
 ```
 
 下载本项目并解压到主机上相应位置（以解压到axtybot文件夹为例）
