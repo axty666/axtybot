@@ -8,7 +8,7 @@ __plugin_usage__ = '''
 输入冷知识随机抽一手佬们的冷知识
 '''
 List = [
-    "g-c-z.cc的三级域名可以找axty搞个"
+    "g-c-z.cc的二级域名可以找axty搞个"
     ,"老乌龟其实不是王八"
     ,"test"
     ,"axty也喜欢依神紫苑(所以拔刀⑧各位)(逃"
@@ -30,7 +30,6 @@ List = [
     ,"据说ax有只可爱的狗狗叫怀念怀念牧牧"
     ,"赞美Fantasy_Z"
     ,"我，秦始皇，打钱!"
-    ,"打出冷知识可以查看冷知识"
     ,"白桦的前任女儿:被ax用心调教(并没有)过后的小树妖(盖亚萌典3mod的小树妖)"
     ,"axty喜欢Fantasy_Z"
     ]
@@ -45,4 +44,5 @@ async def _(session: CommandSession):
 
 @on_natural_language(keywords={'冷知识'}, only_to_me=False)
 async def _(session: NLPSession):
+    return IntentCommand(90.0, '冷知识')
     return IntentCommand(90.0, '冷知识')

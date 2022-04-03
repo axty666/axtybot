@@ -4,28 +4,20 @@ from nonebot import on_natural_language, NLPSession, IntentCommand
 
 __plugin_name__ = '帮助'
 __plugin_usage__ = (
-    '介绍每个支持的功能'
-    '讲句“帮助”康康咱支持啥功能（'
-    '“帮助 支持的功能的名字” 获取对应详细介绍'
+    '介绍关键词'
 )
 
-@on_command('axtyhelp', aliases={'axty帮助'})
+@on_command('/abhelp', aliases={'/ab帮助', '/help', '/帮助'})
 async def _(session: CommandSession):
-    await session.send('''事axty边学边写滴bot!,希望整的活能给佬来点帮助（
----------
-以下是axty整的正常活
----------
-帮助--显示本条信息
-关于axtybot--显示感谢信息和有关信息
----------
-以下是axty整的怪活
----------
-冷知识--输入“冷知识”随机抽取一条冷知识
-随机天气--输入“随机天气”然后输入任意内容来感受axty的怪活
-共享啊团--扫码就骑!
-联动啊团--新春八折!
----------
-如果恁想与axty一起整点活可以私聊axty，若恁也了解Python编程和github也可以可以前往
-https://github.com/axty666/axtybot 一起整活并fork you!
-关于有的消息无法识别请参见https://github.com/nonebot/nonebot/issues/286
+    await session.send('''本bot支持以下关键词：
+一起玩m服、怎样去暮色、怎样创建玩家组织、咋给别人钱、咋去商店、怎么挣钱、怎样给城镇升级、咋打开箱子、添加好友、有无菜单、怎么去地皮世界、怎么安装光影、怎么安装材质包、给别人领地权限、怎么随机传送、有无连锁挖矿、签到里面有啥、游戏币有啥用、咋查看我的账户余额、咋看我多么富
+MARYTBOT支持的关键词：
+简介、模组列表、怎么注册、怎么安装客户端、安装Java、苟佬的完美教室、领地插件介绍、箱子锁的权限列表、服务器内常用命令、崩溃了咋办、服务器玩法、怎么赞助M服、老黄历
+整活关键词：
+共享啊团、联动啊团、联动白桦和狗蛋、胖胖白桦、狗比狗团、吃什么、主机名是什么、请求涩涩、春晚合集
+(如果内容过多会实装/ab欲知更多)
 (axty大爱Fantasy_Z(逃)''')
+
+@on_natural_language(keywords={'/ab帮助', '/abhelp'}, only_to_me=False)
+async def _(session: NLPSession):
+    return IntentCommand(90.0, '/abhelp')

@@ -1,0 +1,47 @@
+import nonebot
+import time
+import datetime
+#from datetime import datetime
+import pytz
+from nonebot import on_command, CommandSession, SenderRoles
+from nonebot import on_natural_language, NLPSession, IntentCommand
+from aiocqhttp.exceptions import Error as CQHttpError
+from jieba import posseg
+
+#时间限制
+start1_time = datetime.datetime.strptime(str(datetime.datetime.now().date()) + '23:30', '%Y-%m-%d%H:%M')
+end1_time = datetime.datetime.strptime(str(datetime.datetime.now().date()) + '23:59', '%Y-%m-%d%H:%M')
+start_time = datetime.datetime.strptime(str(datetime.datetime.now().date()) + '0:00', '%Y-%m-%d%H:%M')
+end_time = datetime.datetime.strptime(str(datetime.datetime.now().date()) + '1:59', '%Y-%m-%d%H:%M')
+now_time = datetime.datetime.now()
+timemsgr = "/mc 12点力，fz光速睡觉⑧"
+async def timemsg():
+    if start_time < now_time < end_time or start_time < now_time < end_time:
+        return timemsgr
+    
+
+#定时看列表
+@nonebot.scheduler.scheduled_job('cron', hour='23', minute='59')
+async def _():
+    bot = nonebot.get_bot()
+    now = datetime.now(pytz.timezone('Asia/Shanghai'))
+    try:
+        await bot.send_group_msg(group_id=640614812,
+                             message="/list")
+    except CQHttpError:
+        pass
+
+#权限限制
+admin_whitelist = {1311305356, 3418789910, 2153069097, 3116886930}
+def admin_permission(sender: SenderRoles):
+    return sender.is_groupchat and (sender.is_admin or sender.is_owner or sender.sent_by(admin_whitelist))
+
+#查找有权限限制的关键词
+@on_command('Fantasy_Z', permission=admin_permission)
+async def _(session: CommandSession):
+    TMG = await timemsg()
+    await session.send(TMG)
+
+@on_natural_language(keywords={'Fantasy_z', 'Fantasy_Z'}, only_to_me=False, only_short_message=False, permission=admin_permission)
+async def _(session: NLPSession):
+    return IntentCommand(90.0, 'Fantasy_Z')
