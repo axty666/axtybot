@@ -1,5 +1,13 @@
 ## **axtybot**
 
+A MARYT PLAYER BOT NAMED axtybot
+
+version:1.9.20220403_MARYT10th
+
+版本：1.9.20220403_MARYT10th
+
+(将升级到2.x版本，敬请期待)
+
 运行于MARYT/VANILO服务器群内的玩家机器人，使用nonebot+gocqhttp搭建
 
 在运行于装载ubuntu18系统的256mb内存的海外vps上时状态良好
