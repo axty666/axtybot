@@ -133,6 +133,8 @@ python bot.py       #运行nonebot
 
 感谢Fantasy_Z对于本项目持续的提供好主意
 
+感谢波凌佬的捉虫(反馈错别字)
+
 本bot参考了开源项目Box-s-ville/luciabot，在此向项目开发者致谢！
 
 本bot参考了开源项目nonebot/nonebot的教程,在此向项目开发者致谢！
