@@ -1,10 +1,6 @@
 ## **axtybot**
 
-A MARYT PLAYER BOT NAMED axtybot
-
-version:1.9.20220403_MARYT10th
-
-版本：1.9.20220403_MARYT10th
+A MARYT PLAYER BOT
 
 (将升级到2.x版本，敬请期待)
 
