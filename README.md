@@ -1,6 +1,6 @@
 ## **axtybot**
 
-A MARYT PLAYER BOT
+A MARYT/VANILO PLAYER BOT
 
 (将升级到2.x版本，敬请期待)
 
