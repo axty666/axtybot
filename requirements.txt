@@ -1,0 +1,6 @@
+nonebot
+nonebot[scheduler]
+jieba 
+pythonping 
+pytz 
+python-dateutil
