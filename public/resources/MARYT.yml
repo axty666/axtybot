@@ -1,0 +1,76 @@
+# 这事MARYT默认包包的设置
+PackName: 'MARYT'
+Information: 'axtybot to MARYT'
+
+# 权限限制
+Permission: 
+  # ban
+  BanQQ: 
+    - 2153069097
+    - 2051208655
+  BanGroup: 
+    - 481482264
+    - 591948356
+  # allow
+  AllowGroup:
+    - 640614812 # m服主群
+    - 783505179 # m服避难所
+    - 621592371 # 茶水馆
+    - 691790710 # test
+Welcome: 
+  Group: 640614812
+  Send: 
+    - "[CQ:at,qq='+str(session.event.user_id)+']'+'迎新佬！"
+    - '佬记得看群公告'
+    - '群文件里面有客↑户↓端'
+FAQ: 
+  InstallShaderPack: 
+    FirstKey: '光影'
+    Aliases: '装光影'
+    Send: 
+      - '群文件-mc资源里有光影包'
+      - '把光影包(那个压缩包)放进启动器目录\.minecraft\shaderpacks文件夹里面'
+      - '然后在esc菜单-视频设置-光影里面选择光影'
+    Keywords: 
+      - '用光影'
+      - '光影'
+      - '上光影'
+      - '加光影'
+      - '装光影'
+  InstallResourcePack:
+    FirstKey: '材质包'
+    Aliases: '装材质包'
+    Send: 
+      - '群文件-mc资源里有材质包'
+      - '把材质包(那个压缩包)放进启动器目录\.minecraft\resourcepacks文件夹里面'
+      - '然后在esc菜单-视频设置-资源包/材质包里面选择材质包'
+    Keywords: 
+      - '用材质包'
+      - '材质包'
+      - '上材质包'
+      - '加材质包'
+FAQPermission:
+  FZInGroup:
+    FirstKey: 'fz不在家'
+    Permission: 
+    # Allow
+      - 3116886930
+      - 2153069097
+      # only_short_message=False
+    Send: '@Fantasy_Z'
+    Keywords: 
+      - 'fz不在家'
+      - '老公不在家'
+      - '老婆不在家'
+  AXInGroup: 
+    FirstKey: 'ax不在家'
+    Permission: 
+    # Allow
+      - 2123775697
+      - 2118630546
+      # only_short_message=False
+    Send: '@axty'
+    Keywords: 
+      - '老婆不在家'
+      - 'ax不在家'
+      - '老公不在家'

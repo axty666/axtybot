@@ -1,0 +1,149 @@
+# 这事10th包的设置
+PackName: '10th'
+Information: 'axtybot to 10th'
+# 欢迎
+Welcome: 
+  Name: '关于axtybot'
+  Usage: '关于axtybot的信息'
+  Groups: 640614812
+  Message: 
+    First: '[CQ:at,qq='+str(session.event.user_id)+']'+'迎新佬！'
+    Second: '佬记得看启动器同目录下的txt说明文件'
+    Third: '群文件里面有客↑户↓端'
+# 核心功能：日常对话
+Help: 
+  Name: '关于axtybot'
+  Usage: '关于axtybot的信息'
+  FirstKey: 'help'
+  Aliases: '帮助', 'axtybot帮助', 'axtybothelp', 'axty帮助', 'axtyhelp'
+  Permission: , only_to_me=True
+  Send: |
+'''本bot支持以下关键词：
+一起玩m服、怎样去暮色、怎样创建玩家组织、咋给别人钱、咋去商店、怎么挣钱、怎样给城镇升级、咋打开箱子、添加好友、有无菜单、怎么去地皮世界、怎么安装光影、怎么安装材质包、给别人领地权限、怎么随机传送、有无连锁挖矿、签到里面有啥、游戏币有啥用、咋查看我的账户余额、咋看我多么富
+MARYTBOT支持的关键词：
+简介、模组列表、怎么注册、怎么安装客户端、安装Java、苟佬的完美教室、领地插件介绍、箱子锁的权限列表、服务器内常用命令、崩溃了咋办、服务器玩法、怎么赞助M服、老黄历
+整活关键词：
+共享啊团、联动啊团、联动白桦和狗蛋、胖胖白桦、狗比狗团、吃什么、主机名是什么、请求涩涩、春晚合集
+(如果内容过多会实装/ab 欲知更多)
+(axty大爱Fantasy_Z(逃)'''
+FAQ: 
+  FirstKey: '咋抱团取暖'
+  Aliases: '有无一块玩的', '有无一起玩的'
+  Send: '佬可以输入./cz加入一个城镇'
+  Send: '或者在./cz里面创建一个城镇(需要1000游戏币)('
+  KeyWords: '一块玩', '一起玩', '抱团', '创建城镇', '建个城镇', '建城镇'
+  ---
+  FirstKey: '咋去暮色'
+  Aliases: '怎样去暮色'
+  Send: '佬请使用"沾满魔力的铜钥匙"代替钻石来开启暮色门'
+  Send: '铜钥匙可以在jei里面查找到（'
+  KeyWords: 去暮色
+  ---
+  FirstKey: '咋创建玩家组织'
+  Aliases: '怎样创建玩家组织'
+  Send: '佬可以找管理组进行一个的询问（'
+  Send: 'ps:佬如果想整点官网的话可以私聊axty('
+  Keywords: '咋创建玩家组织'
+  ---
+  FirstKey: '咋给钱'
+  Aliases: '怎样打钱'
+  Send: './pay 玩家id 钱数'
+  Send: '示例：/pay axty 0.01'
+  Keywords: '咋打钱', '咋给钱', '怎样给钱', '给别人钱'
+  ---
+  FirstKey: '去商店'
+  Aliases: '商店在哪'
+  Send: './sg 高价收购 ./sd 特价商店'
+  Send: '以上两个的物品定时刷新(价格优惠)'
+  Send: '如果上面两个都没有的话可以./spawn回到主城，然后沿着左前方的路走'
+  Keywords: '去商店', '商店在哪', '主城商店'
+  ---
+  FirstKey: '挣钱'
+  Aliases: '得钱'
+  Send: '目前服务器内有两种钱,平常交易时的游戏币'
+  Send: '游戏币可以通过每日签到，去商店那边卖东西来获得('
+  Send: '另一种就是城镇币，佬可以在./cz那边创建一个城镇或者加入一个城镇后以捐城镇币的方式获得'
+  Send: '城镇币可以用来升级城镇有关的东西'
+  Keywords: '挣钱', '得钱', '钱怎么弄'
+  ---
+  FirstKey: '升级城镇'
+  Aliases: '城镇升级'
+  Send: '佬可以用城镇币来升级城镇有关的东西（'
+  Send: '佬在./cz那边创建一个城镇或者加入一个城镇后以捐城镇币的方式得城镇币（'
+  Keywords: '升级城镇', '城镇升级', '给城镇'
+  ---
+  FirstKey: '开箱子'
+  Aliases: '打开箱子'
+  Send: '箱子锁'
+  Keywords: '开箱子', '解锁箱子', '开我的箱子', '箱子怎么解锁'
+  ---
+  FirstKey: '添加人'
+  Aliases: '添加朋友'
+  Send: '如果事ftbteam的请参照服务器内有关提示'
+  Send: '如果是/箱/子/锁/有关的请参考[箱子锁]'
+  Keywords: '添加朋友', '添加人', '添加好友'
+  ---
+  FirstKey: '菜单'
+  Aliases: '蔡丹'
+  Send: '指令'
+  Send: '目前(10th)服务器内无菜单'
+  Keywords: '有无菜单', '菜单的指令', '有没有菜单', '菜单的命令', '有菜单'
+  ---
+  FirstKey: '地皮'
+  Aliases: '地皮世界'
+  Send: '服务器内无地皮'
+  Send: '佬如果有这方面的需要可以考虑领地（'
+  Keywords: '有无地皮', '地皮的指令', '有没有地皮', '地皮的命令', '有地皮'
+  ---
+  FirstKey: '领地权限'
+  Aliases: '领地权限'
+  Send: '单独给别人的：/res pset'
+  Send: '设置公共权限：/res set'
+  Send: '欲知更多，请参照/res ? (记忆里是这个)'
+  Keywords: '给领地权限', '友领地权限', '领地权限', '领地权限的命令', '设置领地'
+  ---
+  FirstKey: '随机传送'
+  Aliases: '有无随机传送'
+  Send: '服务器内无随机传送'
+  Send: '还请佬能够理解'
+  Keywords: '有无随机传送', '随机传送的指令', '有没有随机传送', '随机传送的命令', '有随机传送'
+  ---
+  FirstKey: '连锁'
+  Aliases: '连锁挖矿'
+  Send: '服务器内无连锁挖矿'
+  Send: '还请佬能够理解'
+  Send: '但是有一键砍树，按shift可取消连锁砍树'
+  Send: '一键砍树所需要的时间与砍的原木的数量成正比（'
+  Keywords: '有无连锁', '连锁的指令', '有没有连锁', '连锁的命令', '有连锁', '加连锁'
+  ---
+  FirstKey: '签到有'
+  Aliases: '签到里'
+  Send: '随机建材礼包'
+  Send: '还有游戏币'
+  Send: '有时会有牛奶/金苹果'
+  Keywords: '签到能', '签到有', '签到里', '签到得'
+  ---
+  FirstKey: '游戏币有'
+  Aliases: '游戏币里'
+  Send: '玩家间交易'
+  Send: '还有和别人一起玩的时候创建城镇'
+  Send: '以及充值城镇币 充实城镇'
+  Keywords: '游戏币能', '游戏币有', '游戏币里', '游戏币得'
+  ---
+  FirstKey: '我的账户'
+  Aliases: '有多少钱'
+  Send: '/money'
+  Keywords: '我的账户', '有多少钱', '账户余额', '游戏币余额', '看资产'
+  ---
+  FirstKey: '游戏币排行榜'
+  Aliases: '多么富'
+  Send: '/baltop'
+  Send: '记忆中是这个，如果不是属于咱丢人力'
+  Keywords: '多么富', '财富排行'
+  ---
+  FirstKey: '11th是'
+  Aliases: '11th有'
+  Send: |
+'''11th是m服的暑假新周目,预计将在群内大伙放暑假时开放。
+欲知11th有啥，请点这里:https://g-c-z.cc/11th-reporter/   (如果打不开请等一会再打开)'''
+  Keywords: '11th是', '11tH', '11Th', '11th', '11TH'

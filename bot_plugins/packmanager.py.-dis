@@ -1,0 +1,5 @@
+
+# 包的介绍
+__plugin_userdata__ = '名称：' + \
+    result['PackName'] + '描述：' + \
+    result['Information'] + '作者：' + result['Author']

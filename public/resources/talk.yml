@@ -1,0 +1,293 @@
+# 这事默认包talk的设置
+PackName: 'talk'
+Information: 'default load'
+Author: 'axty'
+
+# 权限限制
+Permission: 
+  # ban
+  BanQQ: 
+    - 2153069097
+    - 2051208655
+  BanGroup: 
+    - 481482264
+  # allow
+  AllowGroup:
+    - 640614812 # m服主群
+    - 783505179 # m服避难所
+    - 621592371 # 茶水馆
+    - 691790710 # test
+
+# about axtybot
+About:
+  Name: '关于axtybot'
+  Usage: '/ab 关于'
+  FirstKey: '关于'
+  Key: 
+    - '关于axtybot'
+    - 'about'
+    - '关于'
+    - 'aboutaxtybot'
+  Send: "a•x•t•y•b•o•t V2.0.1\n如果你想与axty一起整点活可以私聊axty，若了解Python编程可以前往https://github.com/axty666/axtybot 一起整活并fork you!\n---------\n(axty大爱Fantasy_Z(逃)"
+
+# 定时报时
+Crontime:
+    CronOne: 
+        hour: '8'
+        minute: '0'
+        TimeZone: 'Asia/Shanghai'
+        Group_id: '640614812'
+        Message: "八点整力，劲爆激情尽在麦瑞" # 需要修
+
+    CronTwo:
+        hour: '9'
+        minute: '0'
+        TimeZone: 'Asia/Shanghai'
+        Group_id: '640614812'
+        Message: "你醒啦，该上m服签到力"
+
+    CronThree:
+        hour: '15'
+        minute: '0'
+        TimeZone: 'Asia/Shanghai'
+        Group_id: '640614812'
+        Message: "三点力！该摸服力！" # 需要修
+
+    CronFour:
+        hour: '23'
+        minute: '0'
+        TimeZone: 'Asia/Shanghai'
+        Group_id: '640614812'
+        Message: "十一点咯，夜深了，放下书摸会麦瑞放放松好不好" # 需要修
+
+# ping一下，你就知道~
+Ping: 
+  Name: 'ping一下，你就知道~'
+  Usage: 'ping 主机名'
+  FirstKey: 'ping'
+  Aliases: 
+    - 'PING'
+    - 'Ping'
+  Not_host: '主机名是什么捏？'
+  While_not_host: '主机名不能为空哦'
+  Get_host: '好耶，咱正在尝试ping一波'
+  Keywords: 
+    - 'ping'
+    - 'PING'
+    - 'Ping'
+  Successful: "与axtybot的连接情况：\n"
+  Failed: '与axtybot连接出错，请自行排查'
+
+# 哈哈 wttr.in
+Weather: 
+  Name: '查询天气'
+  Usage: '天气 城市名'
+  FirstKey: 'weather'
+  Aliases: 
+    - '天气'
+    - '天气预报'
+    - '查天气'
+  Not_args: '想知道什么城市的天气呢？'
+  While_not_city: '城市名称不能为空呢，请重新输入'
+  List: 
+    - "就像是开学第一课的观后感"
+    - "像是axty丢人的样子"
+    - ",瓦塔西直接哭辽"
+    - "不太懂哟o(´^｀)o"
+    - "？笑死根本不知道(逃)"
+  RollWeatherCity: 
+    - '广场镇'
+    - '桃源乡'
+  User-Agent: 'This.is.axtybot'
+  Error: 'API 服务目前不可用，或者可能输入了无效的地名'
+  Keywords: 
+    - '天气'
+    - '天气预报'
+    - '查天气'
+    - 'weather'
+
+# 感谢名单
+Thanksto: 
+  Name: '感谢名单'
+  Usage: '/ab 感谢名单'
+  FirstKey: axtybotthanksto
+  Aliases: 
+    - 'axtybot感谢名单'
+    - 'thanks'
+    - '感谢名单'
+  #Permission: , only_to_me=True # 我他妈着了什么魔写出这种活
+  Send: "感谢maryt/vanilo管理组对于本项目的支持\n感谢苟佬(azurePh03nix)解决了咱提出的一些写bot时碰见的低级问题\n感谢Fantasy_Z对于本项目持续提供的好创意\n感谢波凌佬的捉虫(反馈错别字)\n感谢maryt/vanilo玩家对于咱这个bot的欢迎\n本bot参考了开源项目Box-s-ville/luciabot，在此向项目开发者致谢！\n本bot参考了开源项目nonebot/nonebot的教程,在此向项目开发者致谢！\n本bot参考了MARYTbot的代码，在此向苟佬致谢！\n\n(axty大爱Fantasy_Z(逃)"
+
+
+# 睡觉提示
+Sleep: 
+  Name: '提醒睡觉小助手'
+  Usage: '输入 睡觉 一词来试试awa'
+  FirstKey: '睡觉'
+  Aliases: 入眠
+  Keywords: 
+    - '睡觉'
+    - '入眠'
+  List: 
+    - "你周围有怪物游荡"
+    - "你被刻意的游戏设计炸死了"
+    - "你只能在夜晚或雷暴天睡觉"
+    - "床离你太远了"
+# 提醒早睡，正常情况下是被禁用的
+#Sleepearly:
+#  Name: '关于axtybot'
+#  Usage: '关于axtybot的信息'
+#  FirstKey: 'Fantasy_Z'
+#  Aliases: 'Fantasy_z'
+#  Permission: 
+#    WhiteList: 1311305356, 3418789910, 2153069097, 3116886930
+#    Return: sender.is_groupchat and (sender.is_admin or sender.is_owner or sender.sent_by(admin_whitelist))
+#  Message: "/mc 12点力，fz光速睡觉⑧"
+#  Cron: 
+#    hour: '23'
+#    minute: '59'
+#    TimeZone: 'Asia/Shanghai'
+#    Group_id: 640614812
+#    Message: "/list"
+
+# 冷知识
+ColdKonwledge: 
+  Name: '冷知识'
+  Usage: '输入 冷知识 来了解更多~'
+  FirstKey: '冷知识'
+  Aliases: 'coldkonwledge'
+  List: 
+    - "g-c-z.cc的二级域名可以找axty搞个"
+    - "老乌龟其实不是王八"
+    - "test"
+    - "axty也喜欢依神紫苑(所以拔刀⑧各位)(逃"
+    - "广场镇官网底下有个↓劲↑爆↓歌↑单"
+    - "axty曾经有许多花活设想(但整出来就是怪活了)"
+    - "axty现在濒临破产，如有乐于捐助的可以私聊"
+    - "我是大陸北方的一個網友，我對於你剛剛的話特別感興趣，請加我tg於我仔細探討"
+    - "如果当前气温低于15°，那人就会感觉到冷"
+    - "如果你感觉到冷，那说明你的周围很冷"
+    - "共享啊团，扫码就骑！"
+    - "寄！"
+    - "Hero其实是由H和ero组成的"
+    - "在涉及阿能的相关问题时，萧雨会变成魔怔人"
+    - "萧雨在服务器会提供一定的安保服务（为了经验值）"
+    - "萧雨的话经常造成大范围的冷场（）"
+    - "萧雨各个软件的收藏夹成分及其复杂（）"
+    - "axtybot第一个正式可以用的功能是冷知识，而真正可以用的随机天气已经被扫入了历史的长河中"
+    - "1.9.1更改了前几个版本的繁长的版本格式"
+    - "该青年大学习了团团们（"
+    - "三分钟前热心的阿苟为你检察了下牛牛的健康，请放心，你的牛牛非常健康"
+    - "念哼哼哈哈有时候会不小心喊成哼↑哼↓啊啊啊"
+    - "今天风和日丽,晴空万里,而你，就该绝版。"
+    - "axty天天说跑路但仍然没跑路(因为懒()"
+    - "不能理解对方的时候可以试着ping下对方的IP地址"
+    - "从前有只可爱的狗狗叫牧牧，后来他死于一场意外，他的主人为了纪念他养了第二条可爱的狗狗叫怀念牧牧"
+    - "据说ax有只可爱的狗狗叫怀念怀念牧牧"
+    - "赞美Fantasy_Z"
+    - "我，秦始皇，打钱!"
+    - "白桦的前任女儿:被ax用心调教(并没有)过后的小树妖(盖亚萌典3mod的小树妖)"
+    - "axty喜欢Fantasy_Z"
+
+Daily: 
+  ShareTuan: 
+    FirstKey: '共享啊团'
+    Aliases: '扫码啊团'
+    Send: '扫码就骑!'
+    Keywords: 
+      - '共享啊团'
+      - '扫码啊团'
+      - '共享阿团'
+      - '扫码阿团'
+  TogetherTuan: 
+    FirstKey: '联动啊团'
+    Aliases: '联动阿团'
+    Send: "劲爆！?%bike与mryat studio最新联动:\n今日，?%bike与mryat studio刚刚官宣了两者最新联动，?%bike宣布，凡在?%bike所属共享单车停车点扫码时大声喊出:“共享啊团，扫码就骑！”者，即可获得玩家:tuan_zi色图一张（原价99元人民币），由于玩家:tuan_zi的原照片十分模糊，所以?%bike只能提供一成新的照片，以及不能保证无重大污渍，更不保证是否为本人。另据本人所说，新春八折一次"
+    Keywords: 
+      - '联动啊团'
+      - '联动阿团'
+  TogetheBaihua:
+    FirstKey: '联动白桦和狗蛋'
+    Aliases: '联动百猾和狗蛋'
+    Send: '狗蛋:胖胖百猾，狗蛋捏捏'
+    Keywords: 
+      - '联动白桦和狗蛋'
+      - '联动百猾和狗蛋'
+      - '联动狗蛋和白桦'
+      - '联动狗蛋和百猾'
+  FatBaihua: 
+    FirstKey: '胖胖白桦'
+    Aliases: '胖胖百猾'
+    Send: '狗蛋：狗蛋捏捏'
+    Keywords: 
+      - '胖胖百猾'
+      - '胖胖白桦'
+  DogTuan: 
+    FirstKey: '狗比狗团'
+    Aliases: '狗批狗团'
+    Send: '吃我一剑!'
+    Keywords: 
+      - '狗比啊团'
+      - '狗批狗团'
+      - '狗比阿团'
+      - '狗比狗团'
+  Eat: 
+    FirstKey: '吃什么'
+    Aliases: '吃啥'
+    Send: 
+      - "吃大厨ax亲手秘制无星好评之鸡蛋炒青菜"
+      - "白菜  寡淡  油腻\n白菜  寡淡  油腻\n鸡蛋  寡淡  油腻  夹生\n鸡蛋  寡淡  油腻  夹生"
+      - "吃完即上路，童叟无欺～～～"
+    Keywords: 
+      - '吃什么'
+      - '吃啥'
+  Host: 
+    FirstKey: '主机名'
+    Aliases: '主鸡名'
+    Send: '域名 / ip 中的 域名 / ip'
+    Keywords: 
+      - '主机名是什么'
+      - '主鸡名是什么'
+      - '主机名是啥'
+      - '主机名到底是什么'
+  Sex: 
+    FirstKey: '来点涩图'
+    Aliases: '请求色色'
+    Send: 
+      - '好的，给！'
+      - 'https://www.aliyundrive.com/s/GKGaBRsAtRL'
+    Keywords: 
+      - '涩图'
+      - '色图'
+      - '瑟图'
+      - '色色'
+      - '涩涩'
+      - '来点涩图'
+      - '请求色色'
+  SpringFestivalGala: 
+    FirstKey: '春晚合集'
+    Aliases: '春晚大合集'
+    Send: '「春晚1956-2021【4K】」，链接:https://www.aliyundrive.com/s/GKGaBRsAtRL'
+    Keywords: 
+      - '春晚合集'
+      - '春晚大全'
+      - '以前的春晚'
+      - '有无春晚'
+      - '重温春晚'
+      - '春晚'
+
+DailyPermission: 
+  AXdontknown: 
+    FirstKey: '不懂就问'
+    Aliases: '不是很懂'
+    Permission: 
+      QQ: 
+      # QQ号
+        - 3116886930
+        - 2153069097 # sender.sendby()
+    Send: '块爬块爬@axty'
+    Keywords: 
+      - '不懂就问'
+      - '哪个孙子'
+      - '那个孙子'
+      - '天天骚扰我'
