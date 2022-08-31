@@ -1,4 +1,3 @@
-from email.headerregistry import Group
 from nonebot import on_notice, NoticeSession
 from .data_load import load_yaml
 
