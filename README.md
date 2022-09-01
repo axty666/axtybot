@@ -24,9 +24,7 @@ A MARYT / VANILO PLAYER BOT
 # 安装依赖
 pip install -r requirements.txt
 ```
-4. 前往[gocqhttp](https://github.com/Mrs4s/go-cqhttp/releases)下载对应系统/架构的压缩包
-5. 在第一步的文件夹里面新建一个叫做gocqhttp的文件夹
-6. 将压缩包的文件解压进文件夹内
+4. 按照 [luciabot](https://github.com/Box-s-ville/luciabot/blob/main/guide/New%20Text%20Document.md#%E7%94%A8-go-cqhttp-%E6%9B%BF%E4%BB%A3-cqhttp) 的教程配置 [gocqhttp](https://github.com/Mrs4s/go-cqhttp/releases) ，注意这里的端口配置为 **5702** 才可以
 
 现在项目目录应如下：
 
