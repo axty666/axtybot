@@ -4,3 +4,4 @@ jieba
 pythonping 
 pytz 
 python-dateutil
+pyyaml
