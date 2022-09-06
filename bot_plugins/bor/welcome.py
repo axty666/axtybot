@@ -3,7 +3,7 @@ from .data_load import load_yaml
 
 # 调用函数 写个全局变量先
 result = load_yaml()
-Group = result['Welcome']['Groups']
+Group = [result['Welcome']['Groups']]
 
 @on_notice('group_increase')
 async def _(session: NoticeSession):
