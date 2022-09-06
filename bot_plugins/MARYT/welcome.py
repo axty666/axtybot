@@ -9,5 +9,9 @@ Group = [result['Welcome']['Group']]
 async def _(session: NoticeSession):
     group_id = session.event.group_id
     if group_id in Group:
-        for value in result['Welcome']['Send']:
-            await session.send(value)
+        message = '[CQ:at,qq='+str(session.event.user_id)+']'+result['Welcome']['Send'][0]
+        message2 = result['Welcome']['Send'][1]
+        message3 = result['Welcome']['Send'][2]
+        await session.send(message)
+        await session.send(message2)
+        await session.send(message3)

@@ -20,7 +20,7 @@ Permission:
 Welcome: 
   Group: 640614812
   Send: 
-    - "[CQ:at,qq='+str(session.event.user_id)+']'+'迎新佬！"
+    - '迎新佬！'
     - '佬记得看群公告'
     - '群文件里面有客↑户↓端'
 FAQ: 
