@@ -8,15 +8,6 @@ from .public_permission import public_permission
 result = load_yaml()
 
 
-@on_command(result['Daily']['ShareTuan']['FirstKey'], aliases=result['Daily']['ShareTuan']['Aliases'], permission=public_permission, only_to_me=False)
-async def _(session: CommandSession):
-    await session.send(result['Daily']['ShareTuan']['Send'])
-
-
-@on_natural_language(keywords=result['Daily']['ShareTuan']['Keywords'], only_to_me=False)
-async def _(session: NLPSession):
-    return IntentCommand(90, result['Daily']['ShareTuan']['FirstKey'])
-
 
 @on_command(result['Daily']['TogetherTuan']['FirstKey'], aliases=result['Daily']['TogetherTuan']['Aliases'], permission=public_permission, only_to_me=False)
 async def _(session: CommandSession):

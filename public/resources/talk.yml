@@ -150,6 +150,48 @@ Sleep:
 #    Group_id: 640614812
 #    Message: "/list"
 
+# 哇！屌
+ShareFz: 
+  Name: '共享厨娘'
+  Usage: '发送 共享厨娘 来点劲爆内容~'
+  FirstKey: '共享厨娘'
+  Aliases: '共享fz'
+  List: 
+    - '达咩哒'
+    - '？我axty今天必须把你头套摘了指定没你好果汁喝嗷'
+    - '该共享已下架'
+    - '？什么初生呐！'
+  Keywords: 
+    - '共享fz'
+    - '扫码fz'
+    - '共享厨娘'
+    - '扫码厨娘'
+
+# 喝！共享啊团
+ShareTuan: 
+  Name: '共享啊团'
+  Usage: '发送 共享啊团 来点劲爆内容~'
+  FirstKey: '共享啊团'
+  Aliases: '扫码啊团'
+  List: 
+    - '扫码就骑!'
+    - '阿团拒绝了您的共享请求'
+    - '阿团拒绝了您的共享请求，并示意您换个隐秘的地方再扫码（'
+    - '扫码被骑！'
+    - '您的信用未达标无法共享'
+    - '阿团繁忙，请稍后再试'
+    - '您的余额不足，支付失败'
+    - '支付失败——请检查花呗余额'
+    - '当前服务区繁忙，请稍后再试'
+    - '宝贝今天被共享的次数太多啦! 请明天再试'
+    - "ERROR: \nHTTP-STATUS-CODE: 402 Payment Required"
+  Listpic: "https://gwres.g-c-z.cc/axtybot/public/pic/sharetuan.jpg"
+  Keywords: 
+    - '共享啊团'
+    - '扫码啊团'
+    - '共享阿团'
+    - '扫码阿团'
+
 # 冷知识
 ColdKonwledge: 
   Name: '冷知识'
@@ -190,15 +232,6 @@ ColdKonwledge:
     - "axty喜欢Fantasy_Z"
 
 Daily: 
-  ShareTuan: 
-    FirstKey: '共享啊团'
-    Aliases: '扫码啊团'
-    Send: '扫码就骑!'
-    Keywords: 
-      - '共享啊团'
-      - '扫码啊团'
-      - '共享阿团'
-      - '扫码阿团'
   TogetherTuan: 
     FirstKey: '联动啊团'
     Aliases: '联动阿团'

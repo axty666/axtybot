@@ -18,11 +18,12 @@ Permission:
     - 621592371 # 茶水馆
     - 691790710 # test
 Welcome: 
-  Group: 640614812
+  Groups: 640614812
   Send: 
     - '迎新佬！'
     - '佬记得看群公告'
     - '群文件里面有客↑户↓端'
+    - '如果客↑户↓端不能下载考虑去官网下'
 FAQ: 
   InstallShaderPack: 
     FirstKey: '光影'
