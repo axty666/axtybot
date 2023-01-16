@@ -37,7 +37,7 @@ async def _(session: CommandSession):
     await session.send(result['FAQPermission']['FZInGroup']['Send'])
 
 
-@on_natural_language(keywords=result['FAQPermission']['FZInGroup']['Keywords'], only_to_me=False, only_short_message=False)
+@on_natural_language(keywords=result['FAQPermission']['FZInGroup']['Keywords'], permission=FZInGroup, only_to_me=False, only_short_message=False)
 async def _(session: NLPSession):
     return IntentCommand(90, result['FAQPermission']['FZInGroup']['FirstKey'])
 
@@ -51,6 +51,6 @@ async def _(session: CommandSession):
     await session.send(result['FAQPermission']['AXInGroup']['Send'])
 
 
-@on_natural_language(keywords=result['FAQPermission']['AXInGroup']['Keywords'], only_to_me=False, only_short_message=False)
+@on_natural_language(keywords=result['FAQPermission']['AXInGroup']['Keywords'], permission=AXInGroup, only_to_me=False, only_short_message=False)
 async def _(session: NLPSession):
     return IntentCommand(90, result['FAQPermission']['AXInGroup']['FirstKey'])

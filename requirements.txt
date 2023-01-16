@@ -1,7 +1,7 @@
 nonebot
 nonebot[scheduler]
 jieba 
-pythonping 
+tcping
 pytz 
 python-dateutil
 pyyaml

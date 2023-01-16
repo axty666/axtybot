@@ -10,3 +10,6 @@ ban_group = result['Permission']['BanGroup']
 
 def public_permission(sender: SenderRoles):
     return sender.from_group(allow_group) and not sender.sent_by(ban_people) and not sender.from_group(ban_group)
+
+def AXDontKnown(sender: SenderRoles):
+    return sender.sent_by(result['DailyPermission']['AXdontknown']['Permission']['QQ'])

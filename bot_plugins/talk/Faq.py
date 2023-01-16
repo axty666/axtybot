@@ -1,7 +1,7 @@
 from nonebot import on_command, CommandSession, SenderRoles
 from nonebot import on_natural_language, NLPSession, IntentCommand
 from .data_load import load_yaml
-from .public_permission import public_permission
+from .public_permission import public_permission, AXDontKnown
 
 # 调用函数 写个全局变量先
 
@@ -87,13 +87,12 @@ async def _(session: CommandSession):
 async def _(session: NLPSession):
     return IntentCommand(90, result['Daily']['SpringFestivalGala']['FirstKey'])
 
-def AXDontKnown(sender: SenderRoles):
-    return sender.sent_by(result['DailyPermission']['AXdontknown']['Permission']['QQ'])
 
 @on_command(result['DailyPermission']['AXdontknown']['FirstKey'], aliases=result['DailyPermission']['AXdontknown']['Aliases'], permission=AXDontKnown, only_to_me=False)
 async def _(session: CommandSession):
     await session.send(result['DailyPermission']['AXdontknown']['Send'])
 
-@on_natural_language(keywords=result['DailyPermission']['AXdontknown']['Keywords'], only_to_me=False)
+
+@on_natural_language(keywords=result['DailyPermission']['AXdontknown']['Keywords'], permission=AXDontKnown, only_to_me=False)
 async def _(session: NLPSession):
     return IntentCommand(90, result['DailyPermission']['AXdontknown']['FirstKey'])

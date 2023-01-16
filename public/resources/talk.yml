@@ -161,11 +161,26 @@ ShareFz:
     - '？我axty今天必须把你头套摘了指定没你好果汁喝嗷'
     - '该共享已下架'
     - '？什么初生呐！'
+    - '共享成功，请注意场合使用♡'
   Keywords: 
     - '共享fz'
     - '扫码fz'
     - '共享厨娘'
     - '扫码厨娘'
+
+ShareAx: 
+  Name: '共享ax'
+  Usage: '发送 共享ax 来点劲爆内容~'
+  FirstKey: '共享ax'
+  Aliases: '共享ax'
+  List: 
+    - '退!退!退!退!退!'
+    - '没活整就去咬打火机'
+  Keywords: 
+    - '共享fz'
+    - '扫码fz'
+    - '共享axty'
+    - '扫码axty'
 
 # 喝！共享啊团
 ShareTuan: 
