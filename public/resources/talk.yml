@@ -125,12 +125,21 @@ Sleep:
   Usage: '输入 睡觉 一词来试试awa'
   FirstKey: '睡觉'
   Aliases: 入眠
+  FirstValue: 0
+  SecondValue: 15
+  MinValue: 5
+  WhiteList:
+    - 241685021 # M服bot
+    - 3116886930 # axty
+    - 2153069097 # axtybot
+    - 2051208655 # axtybot②号
+
   Keywords: 
     - '睡觉'
     - '入眠'
   List: 
     - "你周围有怪物游荡"
-    - "你被刻意的游戏设计炸死了"
+    - "快去睡觉辣 家人"
     - "你只能在夜晚或雷暴天睡觉"
     - "床离你太远了"
 # 提醒早睡，正常情况下是被禁用的

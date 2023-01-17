@@ -12,16 +12,20 @@ result = load_yaml()
 __plugin_name__ = result['Sleep']['Name']
 __plugin_usage__ = result['Sleep']['Usage']
 
-List = result['Sleep']['List']
-async def axtysleep():
-    Thing = List[randint(0,len(List)-1)]
-    return Thing
+WhiteList = [result['Sleep']['WhiteList']]
 
 
 @on_command(result['Sleep']['FirstKey'], aliases=result['Sleep']['Aliases'], permission=public_permission, only_to_me=False)
 async def _(session: CommandSession):
-    AXSL = await axtysleep()
-    await session.send(AXSL)
+    List = result['Sleep']['List']
+    user_id = session.event.user_id
+    Random = randint(result['Sleep']['FirstValue'],result['Sleep']['SecondValue'])
+    if Random < 5:
+        Thing = List[randint(0,len(List)-1)]
+        await session.send(Thing)
+    elif user_id in WhiteList:
+        Thing = List[randint(0,len(List)-1)]
+        await session.send(Thing)
 
 
 @on_natural_language(keywords=result['Sleep']['Keywords'], permission=public_permission, only_to_me=False)
